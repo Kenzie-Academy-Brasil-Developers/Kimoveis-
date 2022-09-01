@@ -31,8 +31,8 @@ const listAllSchedulesFromImovelController = async (
   res: Response
 ) => {
   try {
-    const { propertyId } = req.params;
-    const list = await listAllSchedulesFromImovelService(propertyId);
+    const { id } = req.params;
+    const list = await listAllSchedulesFromImovelService(id);
     return res.status(200).json(list);
   } catch (error) {
     if (error instanceof AppError) {
